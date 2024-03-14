@@ -1,7 +1,7 @@
 import { useMutation } from '@tanstack/react-query';
 import axios from 'axios';
 import { useContext, useEffect, useState } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 import { authContext } from '../context/authContext';
 
 export default function EditNote() {
@@ -66,6 +66,12 @@ export default function EditNote() {
     <>
       <div className="bg-white py-6 sm:py-8 lg:py-12">
         <div className="mx-auto max-w-screen-2xl px-4 md:px-8">
+          <Link
+            to="/"
+            className="bg-gray-400 p-2 rounded-sm text-white font-bold ml-4"
+          >
+            Back
+          </Link>
           <h2 className="mb-4 text-center text-2xl font-bold text-gray-800 md:mb-8 lg:text-3xl">
             Edit Note
           </h2>
